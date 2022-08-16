@@ -4,6 +4,10 @@ import Greeting  from './components/pure/greeting';
 import Greetingf  from './components/pure/greetingF';
 import TaskListComponent from './components/container/task_list';
 import ComponenteA from './components/ejercicio123/componenteA';
+import EjemploHooks1 from './hooks/ejemplo-hooks1';
+import EjemploHook2 from './hooks/ejemplo-hook2';
+import MiComponenteConContexto from './hooks/ejemplo-hooks3'; 
+
 
 
 
@@ -30,9 +34,14 @@ function App() {
          {/* componente listado de tarea */}
 
         {/*<TaskListComponent></TaskListComponent>*/}
-        <ComponenteA  contacto= {contactoPrueba}></ComponenteA>
+       {  /*<ComponenteA  contacto= {contactoPrueba}></ComponenteA>*/}
 
-    
+
+       {/** ejemplo de uso de hooks */}
+     {/*  <EjemploHooks1></EjemploHooks1>*/}
+     {/*  <EjemploHook2></EjemploHook2>*/}
+     <MiComponenteConContexto></MiComponenteConContexto>
+     
 
       </header>
     </div>
