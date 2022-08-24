@@ -13,7 +13,7 @@ const TaskListComponent = () => {
 
  
 
- //control del componente
+ //control del ciclo del vida del componente
   useEffect(() => {
     console.log("Task State has been modefy")
     setLoading(false)
