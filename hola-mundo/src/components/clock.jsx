@@ -1,4 +1,4 @@
-/**ejercisio 3,4,5,6 */
+/**ejercisio 4,5,6 */
 
 import React, { useState, useEffect } from 'react';
 
@@ -6,8 +6,8 @@ const Clock = () => {
   const defaultState = {
     fecha: new Date(),
     edad: 0,
-    nombre: 'Martín',
-    apellidos: 'San José',
+    nombre: 'Roger',
+    apellidos: 'Castillo',
   };
 
   const [user, setUser] = useState(defaultState);
