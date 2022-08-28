@@ -9,7 +9,7 @@ import { LEVELS } from '../../models/level.enum';
 import "../styles/task.scss"
 
 
-export const TaskComponent = ({task}) => {
+export const TaskComponent = ({task,complete,remove}) => {
    useEffect(() => {
     console.log("Tarea creada")
     return () => {
@@ -40,9 +40,9 @@ export const TaskComponent = ({task}) => {
  {/**function that return icon depending on completion of the task*/}
    function taskIconCompleted () {
     if (task.completed) {
-        return (<i className="bi bi-check-square" style={{color:"green"}}></i>)
+        return (<i onClick={ () =>complete (task)}className="bi bi-check-square task-action" style={{color:"green"}}></i>)
     }else {
-        return (<i className="bi bi-square" style={{color:"red"}}></i>)
+        return (<i onClick={() =>complete(task)} className="bi bi-square task-action" style={{color:"red"}}></i>)
     }
 
    }
@@ -65,7 +65,7 @@ export const TaskComponent = ({task}) => {
 {/** execution  of function to return icon depending on completion */}
  
 {taskIconCompleted ()}
- <i className="bi-trash" style={{color:"tomato" , fontSize:"20px"}}></i>
+ <i className="bi-trash task-action" onClick={() => remove(task)} style={{color:"tomato" , fontSize:"20px"}}></i>
 
 {/*<span >{task.completed ? "Completed" :"Pending"}</span>*/}
 </td>
@@ -92,7 +92,9 @@ export const TaskComponent = ({task}) => {
 
 
 TaskComponent.propTypes = {
- task : PropTypes.instanceOf(Task)
+ task : PropTypes.instanceOf(Task).isRequired,
+ complete: PropTypes.func.isRequired,
+ remove: PropTypes.func.isRequired
 };
 
 

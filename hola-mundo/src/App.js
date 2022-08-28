@@ -48,10 +48,10 @@ function App() {
    { /* <GreetingStyled name="Roger"></GreetingStyled>*/}
    {/*<StilosGreeting name="Eduardo Castillo"></StilosGreeting>*/}
       {/*</header>*/}
-     {/* <TaskListComponent></TaskListComponent>*/}
+      <TaskListComponent></TaskListComponent>
 
      {/** gestion de eventos */}
-    <Father></Father>
+    {/*<Father></Father>*/}
     </div>
   );
 }

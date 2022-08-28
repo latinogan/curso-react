@@ -3,11 +3,12 @@ import { useEffect } from 'react';
 import { LEVELS } from '../../models/level.enum';
 import {Task} from "../../models/task.class"
 import TaskComponent from '../pure/task';
+import   Taskform from "../pure/forms/taskform"
 
 
 const TaskListComponent = () => {
     let defaultTask= new Task( "Rogers","Default description",false,LEVELS.NORMAL);
-    let defaultTask1= new Task( "BRIAN","Default description1",true,LEVELS.URGENT);
+    let defaultTask1= new Task( "BRIAN","Default description1",false,LEVELS.URGENT);
     let defaultTask2= new Task( "Diego","Default description2",false,LEVELS.BLOCKING);
 
 
@@ -26,11 +27,32 @@ const TaskListComponent = () => {
     };
   }, [tasks]);
 
+   function completedTask (task) { 
+    console.log( "complete this task",task)
+    const index= tasks.indexOf(task)
+    const tempTasks= [...tasks]
+    tempTasks[index].completed=!tempTasks[index].completed;
+    // update the state of the component and it will update the itiratopn of the task in order to show task updated
+   setTasks(tempTasks)
+}
+ function deleteTask (task) {
+  console.log( "delete this task",task)
+  const index= tasks.indexOf(task)
+  const tempTasks= [...tasks]
+  tempTasks.splice(index,1)
+  setTasks(tempTasks)
 
-    const changeCompleted=(id) =>{
-        console.log("Cambiar estado de una tarea")
+ }
+ function addTask (task) {
+  console.log( "ADD this task",task)
+  const index= tasks.indexOf(task)
+  const tempTasks= [...tasks]
+  tempTasks.push(task)
+  setTasks(tempTasks)
 
-    }
+ }
+
+
 
     return (
         <div>
@@ -58,7 +80,7 @@ const TaskListComponent = () => {
              {/*  aplicar un for o map para renderizar una lista  */}
 
              {tasks.map((task,index) =>{
-                return(<TaskComponent key={index} task= {task}></TaskComponent>)
+                return(<TaskComponent key={index} task= {task} complete={completedTask} remove={deleteTask}></TaskComponent>)
              })}
         
            
@@ -66,12 +88,15 @@ const TaskListComponent = () => {
            </table>
 
            </div>
-          {/* <Taskform></Taskform>*/}
 
            </div>
         </div>
         {/*  aplicar un for o map para renderizar una lista  */}
         {/*<TaskComponent task= {defaultTask}></TaskComponent>*/}
+            
+
+        <Taskform add ={addTask}></Taskform>
+
         </div>
         
             
