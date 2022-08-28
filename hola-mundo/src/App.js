@@ -9,6 +9,7 @@ import EjemploHook2 from './hooks/ejemplo-hook2';
 import MiComponenteConContexto from './hooks/ejemplo-hooks3'; 
 import GreetingStyled from "./components/pure/greetingStyled"
 import StilosGreeting from "./components/pure/stilosGreeting"
+import Father  from "./components/container/father"
 
 
 
@@ -26,8 +27,8 @@ function App() {
     };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+     {/*  <header className="App-header">*/}
+        {/*<img src={logo} className="App-logo" alt="logo" />*/}
         {/*componentes propio greeting.jsx*/}
        {/* <Greeting name="Roger"></Greeting>*/}
 
@@ -45,8 +46,12 @@ function App() {
      {/*  <EjemploHook2></EjemploHook2>*/}
      {/*<MiComponenteConContexto></MiComponenteConContexto>*/}
    { /* <GreetingStyled name="Roger"></GreetingStyled>*/}
-   <StilosGreeting name="Eduardo Castillo"></StilosGreeting>
-      </header>
+   {/*<StilosGreeting name="Eduardo Castillo"></StilosGreeting>*/}
+      {/*</header>*/}
+     {/* <TaskListComponent></TaskListComponent>*/}
+
+     {/** gestion de eventos */}
+    <Father></Father>
     </div>
   );
 }

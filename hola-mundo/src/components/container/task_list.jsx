@@ -6,9 +6,13 @@ import TaskComponent from '../pure/task';
 
 
 const TaskListComponent = () => {
-    let defaultTask= new Task( "Roger","Default description",false,LEVELS.NORMAL);
+    let defaultTask= new Task( "Rogers","Default description",false,LEVELS.NORMAL);
+    let defaultTask1= new Task( "BRIAN","Default description1",true,LEVELS.URGENT);
+    let defaultTask2= new Task( "Diego","Default description2",false,LEVELS.BLOCKING);
+
+
 // estado del componente
- const [ tasks, setTasks] = useState([defaultTask]);
+ const [ tasks, setTasks] = useState([defaultTask,defaultTask1,defaultTask2]);
  const [ loading, setLoading] = useState(true);
 
  
@@ -30,11 +34,44 @@ const TaskListComponent = () => {
 
     return (
         <div>
-        <div>
-            Your TASKS :
+        <div className="col-12">
+           <h1> Your TASKS :</h1>
+           <div className="card">
+           {/* card header title bootstrap*/ }
+           <div className="card-header p-3">
+           <h5> your task</h5>
+           </div>
+           <div className="card-body" data-mdb-perfect-scrollbar="true" style={ { position:"relative" ,height: " 400px"}}>
+           <table>
+           <thead>
+           <tr>
+           <th scope="col"> Title</th>
+           <th scope="col"> Description</th>
+           <th scope="col"> Priority</th>
+           <th scope="col"> actions</th>
+        
+
+           </tr>
+           </thead>
+           <tbody>
+           {/*to do iterar sobre una lista de tarea */}
+             {/*  aplicar un for o map para renderizar una lista  */}
+
+             {tasks.map((task,index) =>{
+                return(<TaskComponent key={index} task= {task}></TaskComponent>)
+             })}
+        
+           
+           </tbody>
+           </table>
+
+           </div>
+          {/* <Taskform></Taskform>*/}
+
+           </div>
         </div>
         {/*  aplicar un for o map para renderizar una lista  */}
-        <TaskComponent task= {defaultTask}></TaskComponent>
+        {/*<TaskComponent task= {defaultTask}></TaskComponent>*/}
         </div>
         
             
