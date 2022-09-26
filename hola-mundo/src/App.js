@@ -10,6 +10,7 @@ import MiComponenteConContexto from './hooks/ejemplo-hooks3';
 import GreetingStyled from "./components/pure/greetingStyled"
 import StilosGreeting from "./components/pure/stilosGreeting"
 import Father  from "./components/container/father"
+import Optionalrender from "./components/pure/optionalRender"
 
 
 
@@ -48,7 +49,10 @@ function App() {
    { /* <GreetingStyled name="Roger"></GreetingStyled>*/}
    {/*<StilosGreeting name="Eduardo Castillo"></StilosGreeting>*/}
       {/*</header>*/}
-      <TaskListComponent></TaskListComponent>
+
+      <Optionalrender></Optionalrender>
+      {/**proyecto final */}
+    {/*  <TaskListComponent></TaskListComponent>*/}
 
      {/** gestion de eventos */}
     {/*<Father></Father>*/}
