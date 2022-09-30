@@ -12,6 +12,7 @@ import StilosGreeting from "./components/pure/stilosGreeting"
 import Father  from "./components/container/father"
 import Optionalrender from "./components/pure/optionalRender"
 import LoginFormik from "./components/pure/forms/loginFormik"
+import RegisterFormik from "./components/pure/forms/registerFormik"
 
 
 
@@ -52,9 +53,13 @@ function App() {
       {/*</header>*/}
 
       {/*<Optionalrender></Optionalrender>*/}
+
       {/**proyecto final */}
     {/* <TaskListComponent></TaskListComponent>*/}
-    <LoginFormik></LoginFormik>
+    {/**ejemplo de formik */}
+    {/*<LoginFormik></LoginFormik>*/}
+
+    <RegisterFormik></RegisterFormik>
 
      {/** gestion de eventos */}
     {/*<Father></Father>*/}
