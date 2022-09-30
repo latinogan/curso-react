@@ -11,6 +11,7 @@ import GreetingStyled from "./components/pure/greetingStyled"
 import StilosGreeting from "./components/pure/stilosGreeting"
 import Father  from "./components/container/father"
 import Optionalrender from "./components/pure/optionalRender"
+import LoginFormik from "./components/pure/forms/loginFormik"
 
 
 
@@ -50,9 +51,10 @@ function App() {
    {/*<StilosGreeting name="Eduardo Castillo"></StilosGreeting>*/}
       {/*</header>*/}
 
-      <Optionalrender></Optionalrender>
+      {/*<Optionalrender></Optionalrender>*/}
       {/**proyecto final */}
-    {/*  <TaskListComponent></TaskListComponent>*/}
+    {/* <TaskListComponent></TaskListComponent>*/}
+    <LoginFormik></LoginFormik>
 
      {/** gestion de eventos */}
     {/*<Father></Father>*/}
