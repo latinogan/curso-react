@@ -21,6 +21,7 @@ import RegisterFormik from "./components/pure/forms/registerFormik"
 
 
 
+
 function App() {
   const contactoPrueba = {
     nombre: 'Brian',
@@ -59,10 +60,11 @@ function App() {
     {/**ejemplo de formik */}
     {/*<LoginFormik></LoginFormik>*/}
 
-    <RegisterFormik></RegisterFormik>
+    {/*<RegisterFormik></RegisterFormik>*/}
 
      {/** gestion de eventos */}
     {/*<Father></Father>*/}
+
     </div>
   );
 }
