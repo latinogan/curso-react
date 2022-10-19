@@ -1,7 +1,7 @@
 
-import { BrowserRouter as Router,Redirect } from "react-router-dom"
+import { BrowserRouter as Router,Navigate } from "react-router-dom"
 import { Route, Routes} from 'react-router'
-import  LoginPage from "./pages/auth/Loginpage"
+import  LoginPage from "./pages/home/auth/Loginpage"
 import NotFoundPage from "./pages/home/auth/404/NotFoundPage";
 import DashBoard from "./pages/dashbord/Dashboard"
 
@@ -14,9 +14,9 @@ function AppRoutingFinal() {
         <Route path="/">
           {
             loggedIn ?
-            (<Redirect from="/" to="dashboard"/>)
+            (<Navigate from="/" to="dashboard"/>)
             :
-            (<Redirect from="/" to="login"/>)
+            (<Navigate from="/" to="login"/>)
             
           }
 
@@ -28,7 +28,7 @@ function AppRoutingFinal() {
             loggedIn ?
             (<DashBoard/>)
             :
-            (<Redirect from="/" to="login"/>)
+            (<Navigate from="/" to="login"/>)
             
           }
 
