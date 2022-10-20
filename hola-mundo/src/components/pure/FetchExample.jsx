@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from "react"
-import {getAllUsers,getAllPagedUsers,getUserDetails } from "../../services/fetchServices"
+import {getAllUsers,getAllPagedUsers,getUserDetails,login } from "../../services/fetchServices"
 
 const Fetchexample=()=>{
  const [users, setUsers] =useState([])
@@ -66,10 +66,28 @@ const obtainUserDatails =(id)=>{
      console.table(selectedUser)
     })
 }
+const authUser=() =>{
+  login("eve.holt@reqres.in","citylicka")
+  .then((response) => {
+    console.log("TOKEN",response.token)
+    sessionStorage.setItem("token",response.token)
+   
+   })
+   .catch((error) =>{
+    alert(`error while login user: ${error}`)   
+   })
+   .finally(() => { 
+     console.log("ended login users:")
+    })
+}
 
 
     return (
         <div>
+
+        {/**button simulate login */}
+        <button onClick={ authUser}>Auth User</button>
+
         <h2>users :</h2>
        {
         users.map((users ,index) =>

@@ -14,6 +14,7 @@ import Optionalrender from "./components/pure/optionalRender"
 import LoginFormik from "./components/pure/forms/loginFormik"
 import RegisterFormik from "./components/pure/forms/registerFormik"
 import  Fetchexample from "./components/pure/FetchExample"
+import AxiosExample from "./components/pure/AxiosExample"
 
 
 
@@ -65,7 +66,8 @@ function App() {
 
      {/** gestion de eventos */}
     {/*<Father></Father>*/}
-    <Fetchexample></Fetchexample>
+    {/*<Fetchexample></Fetchexample>*/}
+    <AxiosExample></AxiosExample>
 
     </div>
   );
