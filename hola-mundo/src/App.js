@@ -15,6 +15,7 @@ import LoginFormik from "./components/pure/forms/loginFormik"
 import RegisterFormik from "./components/pure/forms/registerFormik"
 import  Fetchexample from "./components/pure/FetchExample"
 import AxiosExample from "./components/pure/AxiosExample"
+import  Axioscrudexample from "./components/pure/AxiosCRUDExample"
 
 
 
@@ -44,30 +45,33 @@ function App() {
          {/* componente listado de tarea */}
 
         {/*<TaskListComponent></TaskListComponent>*/}
-       {  /*<ComponenteA  contacto= {contactoPrueba}></ComponenteA>*/}
+        {  /*<ComponenteA  contacto= {contactoPrueba}></ComponenteA>*/}
 
 
-       {/** ejemplo de uso de hooks */}
-     {/*  <EjemploHooks1></EjemploHooks1>*/}
-     {/*  <EjemploHook2></EjemploHook2>*/}
-     {/*<MiComponenteConContexto></MiComponenteConContexto>*/}
-   { /* <GreetingStyled name="Roger"></GreetingStyled>*/}
-   {/*<StilosGreeting name="Eduardo Castillo"></StilosGreeting>*/}
-      {/*</header>*/}
+{/** ejemplo de uso de hooks */}
+{/*  <EjemploHooks1></EjemploHooks1>*/}
+{/*  <EjemploHook2></EjemploHook2>*/}
+{/*<MiComponenteConContexto></MiComponenteConContexto>*/}
+{ /* <GreetingStyled name="Roger"></GreetingStyled>*/}
+{/*<StilosGreeting name="Eduardo Castillo"></StilosGreeting>*/}
+{/*</header>*/}
 
-      {/*<Optionalrender></Optionalrender>*/}
+{/*<Optionalrender></Optionalrender>*/}
 
-      {/**proyecto final */}
-    {/* <TaskListComponent></TaskListComponent>*/}
-    {/**ejemplo de formik */}
-    {/*<LoginFormik></LoginFormik>*/}
+{/**proyecto final */}
+{/* <TaskListComponent></TaskListComponent>*/}
+{/**ejemplo de formik */}
+{/*<LoginFormik></LoginFormik>*/}
 
-    {/*<RegisterFormik></RegisterFormik>*/}
+{/*<RegisterFormik></RegisterFormik>*/}
 
-     {/** gestion de eventos */}
-    {/*<Father></Father>*/}
-    {/*<Fetchexample></Fetchexample>*/}
-    <AxiosExample></AxiosExample>
+{/** gestion de eventos */}
+{/*<Father></Father>*/}
+{/*<Fetchexample></Fetchexample>*/}
+{/*<AxiosExample></AxiosExample>*/}
+    
+
+    <Axioscrudexample></Axioscrudexample>
 
     </div>
   );
