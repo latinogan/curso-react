@@ -16,6 +16,8 @@ import RegisterFormik from "./components/pure/forms/registerFormik"
 import  Fetchexample from "./components/pure/FetchExample"
 import AxiosExample from "./components/pure/AxiosExample"
 import  Axioscrudexample from "./components/pure/AxiosCRUDExample"
+import  LoginUseState from "./components/LoginUseState"
+import  LoginUseReducer from "./components/LoginUseReducer"
 
 
 
@@ -71,7 +73,9 @@ function App() {
 {/*<AxiosExample></AxiosExample>*/}
     
 
-    <Axioscrudexample></Axioscrudexample>
+  {/* <Axioscrudexample></Axioscrudexample>*/}
+ {/* <LoginUseState></LoginUseState>*/}
+ <LoginUseReducer></LoginUseReducer>
 
     </div>
   );

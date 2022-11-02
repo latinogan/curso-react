@@ -34,7 +34,7 @@ export const  getAllUsersById=(id) =>{
 export const  createUser=(name,job) =>{
     let body={
         name:name,
-        job:job
+        job:job  
     }
     
      return axios.post("https://reqres.in/api/users",body)
@@ -43,8 +43,7 @@ export const  createUser=(name,job) =>{
 
 //todo Update user
 export const  updateUser=(id,name,job) =>{
-    let body={
-        
+    let body={   
         name:name,
         job:job
     }
